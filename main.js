@@ -218,6 +218,103 @@ function myFn(){
 
 myFn()
 */
- 
+
+
+// Строгий режим:
+// В начале программы вписать - 'use strict' --> !!! запрещает использование необъявленных переменных !!!:
+/*'use strict'
+function myFn(){
+    function innerFn(){
+        a = true // Uncaught ReferenceError ReferenceError: a is not defined at innerFn
+        console.log(a)
+    }
+    innerFn()
+}
+
+myFn()
+*/
+
+// Операторы: 
+/*
+ Арифметические: +, -, *, /
+ Сравнения: ===, !==, <=, >=
+ Логические: !, &&, ||
+ Присваивания: =
+*/
+
+// Текстовые операторы: 
+// typeof, instanceof, new, delete
+
+// Инфиксная запись(Оператор находится между операндами):
+/*
+ a = true
+ a + b
+ a += 5
+ a || b
+ a > b
+*/
+
+// Префиксная запись(Оператор находится слева от операнда):
+/*
+ a++ 
+ delete obj.a
+ tupeof a 
+*/
+
+// Постфиксная запись(Оператор находится справа от операнда):
+/*
+ a++
+ myFunction()
+*/
+
+// Логические операторы(Более подробно): 
+/*
+ !  - не - всегда возвращает значение boolean(true or false)
+ && - и
+ || - или
+*/
+
+// Оператор ... :
+/*const person = {
+    name: 'Aliaksei',
+    surname: 'Matsiuyk'
+}
+
+const personAge = {
+    ...person,
+    age: 18,
+    adult: true
+
+}
+
+console.table(personAge)
+*/
+
+// Объединение объектов с помощью оператора ...
+/*const bookFilling = {
+    topic: 'Dragons',
+    width: 18,
+    height: 20
+}
+
+const bookPrice = {
+    price: '200$'
+}
+
+const book = {
+    ...bookFilling,
+    ...bookPrice
+}
+
+console.table(book)
+*/
+
+// Конкатенация строк: 
+
+
+
+
+
+
 
 
