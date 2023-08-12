@@ -256,7 +256,7 @@ myFn()
 
 // Префиксная запись(Оператор находится слева от операнда):
 /*
- a++ 
+ ++a 
  delete obj.a
  tupeof a 
 */
@@ -309,12 +309,71 @@ const book = {
 console.table(book)
 */
 
-// Конкатенация строк: 
+// Конкатенация строк:
+/*const hello = 'Hello'
+const world = 'World'
 
+const greeting = hello + ' ' + world
+console.log(greeting)
+*/
+// Шаблонные строки:
+/*
+const myName = 'Aliaksei'
+const myCity = 'Minsk'
 
+const greeting = "Hello, my is " + `${myName}` + " im live in " + `${myCity}` + '!'
+console.log(greeting)
+*/
 
+// Функциональные выражения(Функция без имени):
+/*function(a, b) {
+    ...
+}
 
+setTimeout(function() {
+    console.log('Отложенное сообщение')
+}, 2000)
+*/
 
+// Стрелочные функции:
+/*const myFunction = (a, b) => {
+    let c 
+    a = a + 1
+    c = a + b
+    return c
+}
+
+myFunction(5, 3)
+
+//Стрелочная функция в вызове другой функции:
+setTimeout(() => {
+    console.log('Hello')
+}, 1000)
+*/
+
+//Значения параметров функции по умолчанию:
+/*
+function multByFactor(value, multiplier = 1) {
+    return value * multiplier
+}
+
+multByFactor(5, 10)
+*/
+
+const newPost = (post, addedAt = Date()) => { //Переписать эту часть кода так, чтобы она возвращала явно!!! тайм код : 5:07:00!!!
+    post,
+    addedAt,
+}
+
+const firstPost = {
+    id: 1,
+    author: 'Aliaksei'
+}
+
+const ultraNewPost = newPost(firstPost)
+console.log(ultraNewPost)
+console.table(ultraNewPost)
+console.dir(ultraNewPost)
 
 
 
