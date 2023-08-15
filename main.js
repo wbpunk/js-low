@@ -358,7 +358,7 @@ function multByFactor(value, multiplier = 1) {
 }
 
 multByFactor(5, 10)
-*/
+
 
 const newPost = (post, addedAt = Date()) => { //Переписать эту часть кода так, чтобы она возвращала явно!!! тайм код : 5:07:00!!!
     post,
@@ -374,6 +374,111 @@ const ultraNewPost = newPost(firstPost)
 console.log(ultraNewPost)
 console.table(ultraNewPost)
 console.dir(ultraNewPost)
+*/
 
+// Обработка ошибок: 
+/*
+const fnWithError = () => {
+    throw new Error('Some error...')
+}
 
+fnWithError()
+
+console.log('Continue...')
+*/
+
+// try/catch: 
+/*
+const fnWithError = () => {
+    throw new Error('Some error...')
+}
+
+try{
+    fnWithError()    
+} catch (error) {
+    console.error(error)
+    console.log(error.message)
+}
+
+console.log('Continue...')
+*/
+
+// Инструкции: 
+// Инструкция обычно заканчтвается точкой с запятой!!!
+// Исключение: Точка с запятой не требуется после блока инструкций!!!
+// !!!Точку с запятой можно опускать!!!
+/*
+let a; 
+
+const b = 5;
+
+if (a > b) {
+    console.log('...');
+} // <-------------------- !!!Точка с запятой не нужна!!!
+
+for (let i = 0; i++; i < 5) {
+    console.log('i');
+} // <-------------------- !!!Точка с запятой не нужна!!!
+*/
+
+// Выражение-инструкция:(Если выражение написано на отдельной строке)
+/*
+'abc';
+
+a = a + 3;
+
+c = a + b;
+
+d = 'Good ' + 'Evening';
+
+myFunction(c, d);
+
+console.log('hey');
+// Инструкция не модет быть трансформирована в выражение!!!
+*/
+
+// Как отличить инструкцию от выражения?:
+/*
+function myBeautifulFunction(a){
+    console.log(a += 1);
+}
+
+const b = false
+
+let a = 20
+let c = 11
+
+myBeautifulFunction(5)
+myBeautifulFunction(false)
+myBeautifulFunction(a + c)
+myBeautifulFunction(c = a + b )
+myBeautifulFunction(c = c += a)
+myBeautifulFunction(c = c += a;) // <-------- с = с += a; инструкция
+myBeautifulFunction(let b) // <------ let b инструкция 
+*/
+
+// Массивы(Массив - это объект с цифровыми именами свойств):
+
+// Первый способ вызова массива:
+/*
+const myIntArray = [1, 2, 3]
+console.log(myIntArray)
+
+const myStrArray = ['Hi', 'Hello', ')']
+console.log(myStrArray)
+*/
+
+// ----------------------------------------------------------------------------
+
+// Второй способ вызова массива:
+/*
+const myIntArray2 = new Array(1, 2, 3)
+console.log(myIntArray2)
+
+const myStrArray2 = new Array('Hello', 'Hi', ')')
+console.log(myStrArray2)
+*/
+
+const myArray = [1, true, false, 'Hello']
+console.log(myArray)
 
