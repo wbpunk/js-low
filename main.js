@@ -477,8 +477,138 @@ console.log(myIntArray2)
 
 const myStrArray2 = new Array('Hello', 'Hi', ')')
 console.log(myStrArray2)
-*/
 
 const myArray = [1, true, false, 'Hello']
 console.log(myArray)
+*/
+
+//Массив против Объекта:
+/*
+const myObject = {
+    0: 1,
+    1: 2,
+    2: 3,
+    length: 3
+}
+
+console.log(myObject)
+
+const myArray = [1, 2, 3]
+console.log(myArray)
+// Визуально массив и объект похожи, однако они имеют разные прототипы и поведение!!!
+*/
+
+// Чтение значений массива: 
+/*
+const myArray = ['Hello', 2, true, 5]
+
+console.log(myArray)
+console.log(myArray[0])
+console.log(myArray[2])
+console.log(myArray[1])
+console.log(myArray.length)
+console.log(myArray.length = 4)
+console.log(myArray)
+*/
+
+// Длина массива, изменения значений массива, удаление/добавление значения массивов: 
+/*
+const myArray = [1, 2, 3, 4, 5]
+
+console.log(myArray)
+console.log(myArray.length)
+myArray[2] = 'Lesha'
+myArray[0] = false
+myArray[1] = true
+myArray[5] = 70
+console.log(myArray)
+delete myArray[2]
+console.log(myArray)
+console.log(myArray.length)
+*/
+
+// Методы массивов(push, pop, shift, unshift, forEach, map):
+/* 
+// PUSH(Добавляет новый элемент в конец массива):
+const myArray = [1, 2, 3]
+
+console.log(myArray)
+myArray.push(54)
+console.log(myArray)
+myArray.push(false)
+console.log(myArray)
+*/
+
+// POP(Удаляет элемент с конца массива):
+/*
+const myArray = [1, 2, 3, 4, 5, 6]
+
+console.log(myArray)
+myArray.pop()
+console.log(myArray)
+// Так же может возвращать в консоль удаленный элемент массива!!!
+const removedElement = myArray.pop()
+
+console.log(myArray)
+console.log(removedElement)
+*/
+
+// UNSHIFT(Позволяет добавить элемент в начале массива):
+/*
+const myArray = [1, 2, 3]
+
+console.log(myArray)
+myArray.unshift(true)
+console.log(myArray)
+myArray.unshift(false)
+console.log(myArray)
+*/
+
+// SHIFT(Аналогичен методу POP. Удаляет первый элемент в массиве):
+/*
+const myArray = [true, 1, 2, 3, 4]
+
+console.log(myArray)
+myArray.shift()
+console.log(myArray)
+
+// Так же можно вернуть в консоль удаленный элемент как при использовании метода POP!!!
+const removedElement = myArray.shift()
+console.log(myArray)
+console.log(removedElement)
+*/
+// Все эти методы(push, pop, unshift, shift) не создают новый массив! Они мутируют оригинальный массив!!!
+
+//forEach(Не меняет оригинальный массив!!!)
+/*
+// С помощью этого метода можно перебрать каждый элемент массива и выполнить определенные действия с этими элементами!!!
+// Этот метод не должен ничего возвращать. Он нужен исключительно для перебора элемментов и выполнения каких либо действий с ними
+const myArray = [1, 2, 3, 10]
+console.log(myArray)
+
+myArray.forEach(el => console.log(el * 2))// -------- тут мы передаем функцию(В этом случае колбэк функцию), так же мы не меняем оригинальный массивб мы лишь выполняем действия с его элеменатми!
+
+console.log(myArray)
+*/
+
+// MAP(Возвращает новый массив):
+/*
+// MAP всегда вернет массивой той длины, которой был оригинальный массив!
+//Создает новый массив и возвращает колбэк функцию определенное количество раз, в зависимости от количества элементов в массиве!
+// Так же как и в методе forEach, ожидает колбэк функцию в качестве аргумента!!!
+const myArray = [1, 2, 3]
+console.log(myArray)
+// Ниже мы присвоили метод MAP новой переменной на основе старой переменной, где новая переменная приняла значения старого массива!
+// А так же в функции мы берем каждый элемент массива и умножаем его на три, а полученные значения присваиваем новому массиву!
+const newArray = myArray.map(el => el * 3)//Создает новый массив и формирует его исходя из результатов этой колбэк функции
+console.log(newArray)//Новый массив [3, 6, 9]
+console.log(myArray)//Старый массив(не изменился) [1, 2, 3]
+*/
+
+// Деструктизация: 
+
+
+
+
+
 
