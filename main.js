@@ -605,10 +605,265 @@ console.log(newArray)//Новый массив [3, 6, 9]
 console.log(myArray)//Старый массив(не изменился) [1, 2, 3]
 */
 
-// Деструктизация: 
+// Деструктизация объектов:
+// Для объектов фигурные скобки
+/* 
+const myProfile = {
+    name: 'Aliaksei',
+    password: 1234, 
+    hasSignedAgreement: true,
+}
+
+// Ниже происходит объявление новых переменных и присваивание значений на основе значений свойств объекта
+// Перед равно находятся названия новых переменных которые будут автоматически объявлены
+// После равно находится переменная содержащая объект
+const {name, password, hasSignedAgreement} = myProfile
+
+console.log(name)
+console.log(password)
+console.log(hasSignedAgreement)
+*/
+
+// Деструктуризация массивов:
+// Для массивов квадратные скобки
+/*
+const vegetables = ['cucumber', 'potato', 'corn']
+
+const [vegetableOne, vegetableTwo, vegetableThree] = vegetables
+
+console.log(vegetableOne)
+console.log(vegetableTwo)
+console.log(vegetableThree)
+console.log(vegetables)
+*/
+
+// Деструктуризация в функциях:
+/* 
+const myProfile = {
+    name: 'Aliaksei',
+    password: 1234, 
+    hasSignedAgreement: true,
+}
+
+//       Деструктуризация параметров
+//                     |
+//                     | 
+//                     |
+//                     |
+//                     V
+const myInfo = ({name, password}) => {
+    if (!password) {
+        return `User ${name} has no password`
+    }
+
+    return `User ${name} password is ${password}`
+}
+
+console.log(myInfo(myProfile))
+*/
+
+// Условные конструкции(if, if...else, switch, тернарный оператор):
+/*
+let a = 20
+let b = 20
+if (a > b == true) {
+    console.log('a bigger than b !')
+}
+else if (a < b == true) {
+    console.log('a smaller than b !')
+} else {
+    console.log('both numbers are equal !')
+}
+*/
+// IF: 
+/*
+if (Условие) {
+    //Блок кода, выполняемый однократно, если Условие правдиво
+}
+
+let val = 10
+
+if (val > 5) {
+    val += 20
+}
+
+console.log(val)
+
+const person = {
+    age: 20
+}
+if (!person.name) {
+    console.log('Имя не указано')
+}
+*/
+
+// IF ELSE:
+/*
+if (Условие) {
+    //Блок кода, выполняемый однократно, если Условие правдиво
+} else {
+    // Блок кода, выолняемый однократно, если Условие ложно
+}
+
+
+let val = 10
+
+if (val < 5) {
+    val += 20
+} else {
+    val -= 20
+}
+console.log(val)
+*/
+
+// IF ELSE IF:
+/*
+if (Условие) {
+    //Блок кода, выполняемый однократно, если Условие правдиво
+} else if (Условие 2) {
+    // Блок кода, выолняемый однократно, если Условие 2 правдиво
+} else {
+    // Блок кода, выполняемый однократно, если предыдушие условия ложны
+}
+*/
+
+/*
+let a = 20
+let b = 20
+if (a > b == true) {
+    console.log('a bigger than b !')
+} else if (a < b == true) {
+    console.log('a smaller than b !')
+} else {
+    console.log('both numbers are equal !')
+}
+*/
+
+// Предпочтительный формат IF:
+/*
+if (Условие 1) {
+    //Блок кода, выполняемый однократно, если Условие 1 правдиво
+}
+
+if (Условие 2) {
+    //Блок кода, выполняемый однократно, если Условие 2 правдиво
+}
+
+if (Условие 3) {
+    //Блок кода, выполняемый однократно, если Условие 3 правдиво
+}
+
+
+const age = 25
+
+if (age >= 18) {
+    console.log('Is Adult')
+}
+
+if (age < 18 && age >= 12) {
+    console.log('Is teenager')
+}
+if (age <= 18 && age <= 12) {
+    console.log('Is child')
+}
+
+*/
+
+// Использование if в функциях:
+/*
+const sumOfPositiveNumbers = (a, b) => {
+    if (typeof a !== 'number' || typeof b !== 'number') {
+        return 'One of arguments is not a number'
+    }
+    if (a <= 0 || b <= 0){
+        return 'Numbers are not positive'
+    }
+    return a + b
+}
+
+console.log(sumOfPositiveNumbers(5, 0))
+*/
+
+
+// Оператор switch&case:
+/*
+switch (Выражение) {
+    case A:
+        //Действия если Выражение === А
+        break 
+        // break обязательно!!! Если не будет break то неважно, равно ли действие А или нет, мы все ровно пойдем анализировать кейсы дальше
+    case B:
+        //Действия если Выражение === B
+        break
+    default: // выполняется, если выражение не равно А и не равно В
+    //Действия по умолчанию
+}
+
+
+const month = 4
+
+switch (month){
+    case 12:
+        console.log('Это декабрь')
+    break
+    case 5: 
+        console.log('Это май')
+    break
+    case 4:
+        console.log('Это aпрель')
+    break
+    default: 
+        console.log('Тут нет нужного месяца...')
+}
+*/
+
+// Тернарный оператор(Имеет 3 операнда!!!):
+
+// Конструкция с тернарным оператором это выражение!!!
+// Выражение всегда возвращает значение!!!
+
+//Синтаксис тернарного оператора: 
+/*
+Условие ? Выражение 1 : Выражение 2
+*/
+//  / \
+//   |
+//   |
+//   |
+//   |
+// Любое выражение
+
+// Возвращает результат Выражения 1 либо Выражения 2
+// ? и : - это часть синтаксиса тернарного оператора!!!
+
+// Как следует записывать тернарный оператор:
+/*
+Условие
+ ? Выражение 1
+ : Выражение 2
+*/
+
+/*
+const value = 10
+value
+ ? console.log('Условие истинно')
+ : console.log('Условие ложно')
 
 
 
+ const value1 = 11
+ const value2 = 30
+
+ value1 && value2 ? myFunction(value1, value2) : myFunction2()
 
 
+ let value = 11
+ console.log(value >= 0 ? value : -value)
 
+ value = -5 
+const res = value >= 0 ? value : -value
+console.log(res)
+*/
+
+
+// Циклы: 
