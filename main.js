@@ -866,4 +866,134 @@ console.log(res)
 */
 
 
-// Циклы: 
+// Циклы:
+// ЦИКЛЫ МОЖНО ИСПОЛЬЗОВАТЬ ДЛЯ МАССИВОВ, ОДНАКО ДЕЛАТЬ ЭТО НЕ РЕКМОЕНДУЕТСЯ!!!
+// ЛУЧШЕ ИСПОЛЬЗОВАТЬ ФУНКЦИИ ВЫСШЕГО ПОРЯДКА МАССИВОВ, ТАКИЕ КАК: forEach, map, reduce 
+
+// Типы циклов:
+/*
+1. for
+2. for ... in ...
+3. while
+4. do ... while ...
+5. for ... of ...
+*/
+
+// FOR:
+/*
+for (Начальная инструкция; Условие; Итерационное действие) {
+    Блок кода, выполняемый на каждой итерации
+}
+/*
+
+for (let i = 0; i < 5; i++) {
+    console.log(i)
+}
+*/
+
+/*
+// ИПОЛЬЗОВАНИЕ МЕТОДА МАССИВА FOREACH, ДЛЯ ПЕРЕБОРА ЕЛЕМЕНТОВ МАССИВА:
+const myArray = ['first', 'second', 'third']
+myArray.forEach((element, index) => {
+    console.log(element, index)
+})
+*/
+
+// ЦИКЛ WHILE:
+// ЦИКЛ ВЫПОЛНЯЕТСЯ ПОКА УСЛОВИЕ ПРАВДИВО
+// ЕСЛИ УСЛОВИЕ ЛОЖНО, ЦИКЛ НЕ ВЫПОЛНИТСЯ НИ РАЗУ!!!
+
+/*
+while (Условие) {
+    Блок кода, выполняемый на каждой итерации
+}
+*/
+
+/*
+let i = 0
+
+while (i < 5) {
+    console.log(i)
+    i++
+}
+*/
+
+// БЕСКОНЕЧНЫЙ ЦИКЛ:
+/*
+let i = 0
+while (i < 5) {
+    console.log(i)
+}
+*/
+
+// ЦИКЛ DO WHILE:
+/*
+do {
+    Блок кода, выполняемый на каждой итерации
+} while (Условие)
+*/
+
+/*
+let i = 0
+
+do {
+    console.log(i)
+    i++
+}while (i < 5)
+*/
+
+
+// ЦИКЛ FOR IN:
+/*
+for (key in Object) {
+    Действия с каждым свойством объекта
+    Значения свойства - Object[key]
+}
+*/
+
+/*
+const myObject = {
+    name: 'Aliaksei',
+    surname: 'Matsiyuk',
+    age: 18
+}
+
+for (const key in myObject) {
+    console.log(key, myObject[key])
+}
+*/
+
+
+// FOR IN ДЛЯ МАССИВОВ(НЕ РЕКОМЕНДУЕТСЯ):
+
+/*
+const myArray = [true, 10, 'abc']
+for (const key in myArray) {
+    console.log(myArray[key])
+}
+*/
+
+
+// ЦИКЛ FOR OF:
+// !!!не для объектов!!!
+
+/*
+for (Element of Iterable) {
+    Действия с определенным элементом
+}
+*/
+
+/*
+const myString = 'Hey'
+for (const letter of myString) {
+    console.log(letter)
+}
+*/
+
+// Методы:
+
+
+
+
+
+
