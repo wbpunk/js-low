@@ -990,7 +990,105 @@ for (const letter of myString) {
 }
 */
 
-// Методы:
+// Модули:
+
+// export ...
+// import ...
+
+/*
+1 Файл(экспортер):
+const sum = (a, b) => a + b
+
+export default sum
+
+2 Файл(импортер):
+import sumNumbers  from './moduleOne.mjs'
+
+const res = sumNumbers (2, 6)
+console.log(res)
+*/
+
+// Несколько экспортов:
+
+/*
+1 Файл(экспортер):
+const one = 1
+const two = 'two'
+
+export {
+    one,
+    two
+}
+
+2 Файл(импортер):
+import {
+    one,
+    two
+} from './moduleOne.js'
+
+console.log(one)
+console.log(two)
+*/
+
+// ПРАВИЛА РАБОТЫ С МОДУЛЯМИ: 
+/*
+1. Модули должны быть одноцелевыми
+2. Распологать все export инструкции следует внизу файла
+3. Распологать все import инструкции следует вверху файла 
+4. По возможности использовать export default
+*/
+
+// Классы и прототипы:
+
+// class ...
+/*
+class Comment {
+    constructor(text){
+        this.text = text
+        this.votesQty = 0
+    }
+
+    upvote() {
+        this.votesQty += 1
+    }
+}
+
+const firstComment = new Comment('First Comment')
+*/
+
+// Проверка принадледжности:
+/*
+firstComment instanceof Comment
+firstComment instanceof Object
+*/
+
+// Цепочка прототипов:
+// firstComment -----> Comment -----> Object
+
+// Вызов методов:
+/*
+class Comment {
+    constructor(text){
+        this.text = text
+        this.votesQty = 0
+    }
+
+    upvote(){
+        this.votesQty += 1
+    }
+}
+
+const firstComment = new Comment('First Comment')
+
+firstComment.upvote()
+console.log(firstComment.votesQty)
+
+firstComment.upvote()
+console.log(firstComment.votesQty)
+*/
+
+
+// Проверка принадлежности свойств экземпляру объекта:
 
 
 
