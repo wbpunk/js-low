@@ -1090,6 +1090,110 @@ console.log(firstComment.votesQty)
 
 // Проверка принадлежности свойств экземпляру объекта:
 
+/*
+class Comment {
+    constructor(text){
+        this.text = text
+        this.votesQty = 0
+    }
+
+    upvote(){
+        this.votesQty += 1
+    }
+}
+
+const firstComment = new Comment('First Comment')
+
+console.log(firstComment.hasOwnProperty('text'))
+console.log(firstComment.hasOwnProperty('hasOwnProperty'))
+console.log(firstComment.hasOwnProperty('upvote'))
+console.log(firstComment.hasOwnProperty('votesQty'))
+
+*/
+
+
+// Создание нескольких экземляров:
+/*
+
+class Comment {
+    constructor(text){
+        this.text = text
+        this.votesQty = 0
+    }
+    upvote(){
+        this.votesQty += 1
+    }
+}
+
+const firstComment = new Comment('First Comment')
+const secondComment = new Comment('Second Comment')
+const thirdComment = new Comment('Third Comment')
+
+*/
+
+// Статические методы:
+
+/*
+class Comment {
+    constructor(text){
+        this.text = text
+        this.votesQty = 0
+    }
+
+    upvote(){
+        this.votesQty += 1
+    }
+
+    static mergeComments(first, second) {
+        return `${first} ${second}`
+    }
+}
+
+Comment.mergeComments('First Comment, Second Comment')
+
+*/
+
+
+// Расширение других классов:
+
+/*
+class NumbersArray extends Array {
+    sum() {
+        return this.reduce((el, acc) => acc += el, 0)
+    }
+}
+
+const myArray = new NumbersArray(2, 6, 10)
+console.log(myArray)
+console.log(myArray.sum())
+
+
+// Цепочка прототипов:
+// myArray -----> NumbersArray -----> Array -----> Object
+*/
+
+/*
+// ТЕСТИК:(ПРОВЕРКА СЕБЯ)
+class Person {
+    constructor(name, surname){
+        this.name = name
+        this.surname = surname
+        this.age = 0
+    }
+    ageup(){
+        this.age += 1
+    }
+}
+
+const birthDay = new Person('Lesha', 'Matsiyuk')
+
+*/
+
+
+// Промисы:
+
+
+
 
 
 
