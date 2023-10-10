@@ -1191,11 +1191,161 @@ const birthDay = new Person('Lesha', 'Matsiyuk')
 
 
 // Промисы:
+// Промисы позволяют обрабатывать отложенные во времени события
+// Промис - это обещание предоставить результат позже
+// Промис может вернуть ошибку если результат предоставить невозможно
+
+
+/*
+Состояния промиса:
+
+1. Ожидание(При запуске)
+2. Исполнен(Если удалось вернуть результат)
+3. Отклонен(Если возникла ошибка)
+
+*/
+
+// Промис - это объект
+
+// Создание промиса:
+
+//const myPromise = new Promise((resolve, reject) => {
+    /**
+     * Выполнение асинхронных действий
+     * 
+     * Внутри этой функции нужно в результате вызвать
+     * одну из функций resolve или reject
+     */
+//});
+/*Вновь созданный промис будет в состоянии 
+  (ожидания)pending
+*/
+
+
+// Получение результата промиса:
+
+
+//myPromise
+//    .then(value => {
+        /**
+         * Действия в случае успешного исполнения Промиса
+         * Значение value - это значение, переданное в вызове
+         * функции resolve внутри Промиса 
+         */
+//    })
+//    .catch(error => {
+        /**
+         * Действия в случае отклонения Промиса
+         * Значение error - это значение, переданное в вызове
+         * функции reject внутри Промиса
+         */
+//    })
 
 
 
+// Получение данных с помощью FETCH API:
+
+/*
+fetch('https://jsonplaceholder.typicode.com/todos')
+    .then(response => response.json())
+    .then(json => console.log(json))
+    .catch(error => console.error(error))
+*/
+
+// Вызов fetch внутри промиса:
 
 
+//!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+/*
+// Записать в модули и можно использовать
+const getData = (url) => 
+    new Promise((resolve, reject) =>
+    fetch(url)
+        .then(response => response.json())
+        .then(json => resolve(json))
+        .catch(error => reject(error))
+    )
+
+getData('https://jsonplaceholder.typicode.com/todos')
+    .then(data => console.log(data))
+    .catch(error => console.log(error.message))
+
+//!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+*/
 
 
+// ASYNC/AWAIT:
 
+
+// ASYNC/AWAIT - Это специальный синтаксис для упрощения работы с промисами
+// async функция всегда возвращает Promise
+// await синтаксис возможен только внутри async функций
+// async функция ожидает результата инструкции await и не выполняет последующие инструкции
+ 
+
+// Асинхронная функция:
+
+/*
+
+async function asyncFn() {
+    // Всегда возвращает промис
+}
+
+const asyncFn = async () => {
+    // Всегда возвращает Промис
+}
+
+*/
+
+// AWAIT:
+
+/*
+
+const asyncFn = async () => {
+    await <Promise>
+}
+
+asyncFn()
+
+*/
+
+
+// ОЖИДАНИЕ РЕЗУЛЬТАТА AWAIT(ПРИМЕР):
+
+/*
+
+const timerPromise = () =>
+    new Promise((resolve, reject) =>
+        setTimeout(() => resolve(), 2000))
+
+const asyncFn = async () => {
+    console.log('Timer starts')
+    const startTime = performance.now()
+    await timerPromise()// <----- Функция дальше не выполняется пока не получен результат Промиса(Исполнен/Отклонен)
+    const endTime = performance.now()
+    console.log('Timer ended', endTime - startTime)
+}
+
+asyncFn()
+
+*/
+
+
+// ПЕРЕХОД С ПРОМИСОВ НА ASYNC/AWAIT:
+
+
+const getData = async (url) => {
+    const res = await fetch(url)
+    const json = await res.json()
+    return json
+}
+
+const url = 'https://jsonplaceholder.typicode.com/todos'
+
+try{
+const data = await getData(url)
+console.log(data)
+}catch(error){
+    console.log(error.message)
+}
